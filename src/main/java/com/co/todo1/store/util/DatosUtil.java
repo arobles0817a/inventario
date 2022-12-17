@@ -10,12 +10,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 // ing  arobles
-public class EncriptarDatos {
+public class DatosUtil {
 
-    private EncriptarDatos() {
+    private DatosUtil() {
         throw new IllegalStateException("Utility class");
     }
-    private static final Logger log = LoggerFactory.getLogger(EncriptarDatos.class);
+    private static final Logger log = LoggerFactory.getLogger(DatosUtil.class);
     public static final String KEY_CIFRADO = "TODO EN ONE";
 
     public static String encriptar(String texto) {

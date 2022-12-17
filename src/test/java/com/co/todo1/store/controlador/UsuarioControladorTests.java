@@ -5,8 +5,8 @@
  */
 package com.co.todo1.store.controlador;
 
-import com.co.todo1.store.dto.ProductoDTO;
-import com.co.todo1.store.entidad.ProductoEntidad;
+import com.co.todo1.store.dto.UsuarioDTO;
+import com.co.todo1.store.entidad.UsuarioEntidad;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,21 +15,30 @@ import org.springframework.http.ResponseEntity;
 
 /**
  *
- * @author AROBLES
+ * @author Admin
  */
 @SpringBootTest
-public class ProductoControladorTest {
+public class UsuarioControladorTests {
 
     @Autowired
-    private ProductoControlador productoControlador;
+    private UsuarioControlador usuarioControlador;
 
     @Test
     void registraProductoWhenProductoDTOThenResponseEntityNoNulo() throws Exception {
         //Given
-        final ProductoDTO productoDTO = ProductoDTO.builder().nombre("Hojas").estado("A").build();
+        final UsuarioDTO usuarioDTO = UsuarioDTO.builder().
+                documento(1002129747).
+                nombre("Andres Felipe").
+                apellido("Robles Solano").
+                usuario("arobles").
+                contrasena("1002129747").
+                estado("A").
+                build();
         //When
-        final ResponseEntity<ProductoEntidad> responseEntity = productoControlador.registrarProducto(productoDTO);
+        final ResponseEntity<UsuarioEntidad> responseEntity = usuarioControlador.registrarUsuario(usuarioDTO);
         //Then
         assertNotNull(responseEntity.getBody());
+
     }
+
 }

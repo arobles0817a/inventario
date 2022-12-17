@@ -5,6 +5,7 @@
  */
 package com.co.todo1.store.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,6 +17,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
+
 public class KardexDetalleDTO {
 
     private Integer idProducto;
