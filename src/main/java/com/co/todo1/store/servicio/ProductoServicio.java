@@ -5,8 +5,10 @@
  */
 package com.co.todo1.store.servicio;
 
-import com.co.todo1.store.dto.ProductoDTO;
+import com.co.todo1.store.entidad.KardexDetalleEntidad;
+import com.co.todo1.store.entidad.KardexEntidad;
 import com.co.todo1.store.entidad.ProductoEntidad;
+import com.co.todo1.store.entidad.TipoOperacionEntidad;
 
 /**
  *
@@ -15,5 +17,15 @@ import com.co.todo1.store.entidad.ProductoEntidad;
 public interface ProductoServicio {
 
     public ProductoEntidad registrarProducto(ProductoEntidad productoEntidad);
+
+    public TipoOperacionEntidad verificarOperacion(long idOperacion);
+
+    public KardexEntidad kardexEncabezado(KardexEntidad kardexEntidad);
+
+    public KardexDetalleEntidad kardexDetalle(KardexDetalleEntidad detalleEntidad);
+
+    public ProductoEntidad buscarProducto(long idProdcuto);
+
+    public ProductoEntidad actualizarProducto(ProductoEntidad productoEntidad);
 
 }

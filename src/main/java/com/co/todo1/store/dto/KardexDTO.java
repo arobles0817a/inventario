@@ -6,6 +6,7 @@
 package com.co.todo1.store.dto;
 
 import java.util.Calendar;
+import java.util.List;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,14 +18,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class ProductoDTO {
+public class KardexDTO {
 
-    private String nombre;
-    private Integer precio;
+    private Integer idOperacion;
+    private Integer idUsuario;
     private Calendar fecha;
-    private String estado;
-    private Integer usuId;
-    private Integer saldo;
-    private Integer stock;
-
+    private List<KardexDetalleDTO> productos;
+ 
 }

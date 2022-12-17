@@ -5,26 +5,20 @@
  */
 package com.co.todo1.store.dto;
 
-import java.util.Calendar;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
  *
- * @author AROBLES
+ * @author Admin
  */
 @Getter
 @Setter
 @Builder
-public class ProductoDTO {
-
-    private String nombre;
-    private Integer precio;
-    private Calendar fecha;
-    private String estado;
-    private Integer usuId;
-    private Integer saldo;
-    private Integer stock;
-
+public class MovimientoDTO {
+    
+    private  String mensaje;
+    
+    
 }

@@ -12,10 +12,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -23,39 +21,24 @@ import lombok.Setter;
  * @author AROBLES
  */
 @Entity
-@Table(name = "productos")
+@Table(name = "kardex")
 @Getter
 @Setter
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
-
-public class ProductoEntidad {
+public class KardexEntidad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "pro_id")
+    @Column(name = "kar_id")
     private Long id;
 
-    @Column(name = "pro_nombre")
-    private String nombre;
-
-    @Column(name = "pro_precio")
-    private Integer precio;
-
-    @Column(name = "pro_fecha_creacion")
-    private Calendar fecha;
-
-    @Column(name = "pro_estado")
-    private String estado;
+    @Column(name = "tip_id")
+    private Integer idOperacion;
 
     @Column(name = "usu_id")
     private Integer idUsuario;
 
-    @Column(name = "pro_saldo")
-    private Integer saldo;
-
-    @Column(name = "pro_stock_minimo")
-    private Integer stokMinimo;
+    @Column(name = "kar_fecha_creacion")
+    private Calendar fecha;
 
 }

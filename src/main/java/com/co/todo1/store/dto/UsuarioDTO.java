@@ -1,30 +1,28 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template file, choose Tools | Templatess
  * and open the template in the editor.
  */
 package com.co.todo1.store.dto;
 
-import java.util.Calendar;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
  *
- * @author AROBLES
+ * @author Admin
  */
 @Getter
 @Setter
 @Builder
-public class ProductoDTO {
+public class UsuarioDTO {
 
+    private Integer documento;
     private String nombre;
-    private Integer precio;
-    private Calendar fecha;
+    private String apellido;
+    private String usuario;
+    private String contrasena;
     private String estado;
-    private Integer usuId;
-    private Integer saldo;
-    private Integer stock;
 
 }

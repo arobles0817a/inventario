@@ -5,18 +5,15 @@
  */
 package com.co.todo1.store.repositorio;
 
-import com.co.todo1.store.entidad.ProductoEntidad;
+import com.co.todo1.store.entidad.KardexEntidad;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author AROBLES
+ * @author Admin
  */
 @Repository
-public interface ProductoRepositorio extends JpaRepository<ProductoEntidad, Long> {
-
-    public ProductoEntidad findById(long idProducto);
+public interface KardexRepositorio extends JpaRepository<KardexEntidad, Long> {
 
 }
